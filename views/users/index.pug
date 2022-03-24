@@ -1,0 +1,14 @@
+h1 Users
+
+a(href="/hihi/create") New
+
+form(action="/hihi/search",method="GET")
+    input(type="text", name="q",value = question)
+    button Search
+
+ul
+    each user in users
+        li
+        span= user.name
+        span &nbsp;
+        a(href='/hihi/'+user.id) View
